@@ -30,9 +30,9 @@ void pedir_conductor (void){
         }
         else{
             printf("Ingrese los nombres de los corredores: \n");
-            scanf("%s", carrera_nueva->Nombre);
-            printf("Ingrese el tiempo del corredor: \n");
-            scanf("%d", &(carrera_nueva->Mejor_tiempo));
+            scanf(" %[^\n]%*c", carrera_nueva->Nombre);
+            printf("Ingrese el tiempo del corredor (s): \n");
+            scanf(" %d", &(carrera_nueva->Mejor_tiempo));
             carrera_nueva->next = formula1;
             formula1 = carrera_nueva;
         }
